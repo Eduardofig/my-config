@@ -1,0 +1,12 @@
+# GIMP action-history
+
+(history-item "edit-fill-bg" 4)
+(history-item "file-quit" 1)
+(history-item "image-new" 2)
+(history-item "dialogs-layers" 3)
+(history-item "dialogs-preferences" 2)
+(history-item "tools-clone" 1)
+(history-item "tools-zoom" 0)
+(history-item "tools-text" 1)
+
+# end of action-history

@@ -1,0 +1,96 @@
+clear
+ls
+clear
+c
+clear
+for(let i = 0; i < 10; ++i) echo i
+clear
+ls 
+ls | where name > 10
+ls | where name == 'teste.csz'
+ls | where name == 'teste.csv'
+clear
+ls | where name == 'teste'
+clear
+nvim main.cpp
+clear
+ls
+ls | to json
+ls | to json > a.json
+(ls | to json) > a.json
+$(ls | to json) > a.json
+ls
+ls | where name == *.c
+ls | where name == '*.c'
+ls | where name ~= *.c
+clear
+ls | to json
+ls | to json | parse json
+clear
+ps
+clear
+ps
+ps | where name == 'postgres'
+ps | where name == 'postgres:'
+ps | where name == 'postgres:' 
+clear
+sys
+sys | table
+sys | cpu
+sys | get cpu
+sys | get disks
+sys | get disks.device
+clear
+ls
+open unionfind.c
+open unionfind.c | parse .c
+open unionfind.c | parse 
+open unionfind.c
+open unionfind.c | table
+open unionfind.c | parse .
+open unionfind.c | parse c
+clear
+z 
+z --help
+z contest-cyan/
+z contest-cyan
+z contest
+z contest-cm
+cd 
+clear
+cd v2
+clear
+tutor
+tutor begin
+ls | select name
+clear
+tutor begin
+tutor tables
+tutor cells
+(ls).4.name
+ls.4
+(ls).4
+clear
+tutor cells
+tutor expressions
+echo (2 + 2)
+echo (4 * 10)
+echo (1 << 20)
+echo (1 bit-shl 2)
+tutor cells
+tutor shorthands
+tutor expressions
+tutor echo
+echo 1..10
+tutor each
+echo 1 2 3 | each { |it| $it + 10 }
+tutor blocks
+exit
+clear
+ls
+ls | where type == 'dir'
+ls | where type == 'dir' | table
+ls | where type == 'dir' | transpose
+ls | where type == 'dir' | get name
+clear
+exit

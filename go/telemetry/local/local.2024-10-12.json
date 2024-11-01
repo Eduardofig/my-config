@@ -1,0 +1,30 @@
+{
+ "Week": "2024-10-12",
+ "LastWeek": "",
+ "X": 0.9800086489804472,
+ "Programs": [
+  {
+   "Program": "golang.org/x/tools/gopls",
+   "Version": "v0.16.2",
+   "GoVersion": "go1.21.5",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "gopls/client:neovim": 5,
+    "gopls/completion/latency:\u003c10ms": 6,
+    "gopls/completion/latency:\u003c1s": 1,
+    "gopls/completion/latency:\u003c200ms": 63,
+    "gopls/completion/latency:\u003c50ms": 2,
+    "gopls/completion/len:0": 13,
+    "gopls/completion/len:\u003c=10": 41,
+    "gopls/completion/len:\u003e10": 21,
+    "gopls/completion/used:no": 75,
+    "gopls/gotoolchain:auto": 5,
+    "gopls/goversion:1.21": 5,
+    "gopls/telemetryprompt/attempts:0": 5
+   },
+   "Stacks": {}
+  }
+ ],
+ "Config": "v0.0.0-0"
+}

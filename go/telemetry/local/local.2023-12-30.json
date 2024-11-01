@@ -1,0 +1,32 @@
+{
+ "Week": "2023-12-30",
+ "LastWeek": "",
+ "X": 0.30853551332849993,
+ "Programs": [
+  {
+   "Program": "golang.org/x/tools/gopls",
+   "Version": "v0.14.2",
+   "GoVersion": "go1.21.5",
+   "GOOS": "linux",
+   "GOARCH": "amd64",
+   "Counters": {
+    "counter/main": 33,
+    "gopls/client:neovim": 33,
+    "gopls/completion/latency:\u003c100ms": 22,
+    "gopls/completion/latency:\u003c10ms": 2920,
+    "gopls/completion/latency:\u003c1s": 1,
+    "gopls/completion/latency:\u003c200ms": 6,
+    "gopls/completion/latency:\u003c500ms": 28,
+    "gopls/completion/latency:\u003c50ms": 219,
+    "gopls/definition/latency:\u003c10ms": 14,
+    "gopls/goversion:1.21": 30,
+    "gopls/hover/latency:\u003c10ms": 23,
+    "gopls/references/latency:\u003c10ms": 3
+   },
+   "Stacks": {
+    "gopls/bug\ngolang.org/x/tools/gopls/internal/bug.report:35\ngolang.org/x/tools/gopls/internal/bug.Errorf:2\ngolang.org/x/tools/gopls/internal/lsp/source.SignatureHelp:72\ngolang.org/x/tools/gopls/internal/lsp.(*Server).signatureHelp:9\ngolang.org/x/tools/gopls/internal/lsp.(*Server).SignatureHelp:1\ngolang.org/x/tools/gopls/internal/lsp/protocol.serverDispatch:490\ngolang.org/x/tools/gopls/internal/lsp/lsprpc.(*StreamServer).ServeStream.ServerHandler.func3:5\ngolang.org/x/tools/gopls/internal/lsp/lsprpc.(*StreamServer).ServeStream.handshaker.func4:52\ngolang.org/x/tools/gopls/internal/lsp/protocol.Handlers.MustReplyHandler.func1:2\ngolang.org/x/tools/gopls/internal/lsp/protocol.Handlers.AsyncHandler.func2.2:3\nruntime.goexit:0": 1
+   }
+  }
+ ],
+ "Config": "v0.11.0"
+}
