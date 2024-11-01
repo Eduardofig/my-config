@@ -63,6 +63,7 @@ require'todo-comments'.setup({
     }
 })
 
+-- teste
 -- Hide all semantic highlights
 for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
     -- if group is different @lsp.type.parameter set hl to 0
