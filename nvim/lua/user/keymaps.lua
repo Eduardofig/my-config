@@ -120,6 +120,7 @@ local tmaps = {
     {'n', '<A-i>', builtin.lsp_dynamic_workspace_symbols, {}},
     {'n', '<A-q>', builtin.git_status, {}},
     {'n', '<A-b>', builtin.git_bcommits, {}},
+    {'n', "<A-'>", builtin.git_commits, {}},
     {'n', '<A-y>', ":lua require('telescope').extensions.neoclip.default()<CR>", {}},
 
     {'v', 'J', ":m '>+1<CR>gv=gv", {}},
