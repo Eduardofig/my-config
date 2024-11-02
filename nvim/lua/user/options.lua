@@ -1,6 +1,6 @@
 -- options
 local options = {
-    tabstop = 2,
+    tabstop = 4,
     softtabstop = 2,
     shiftwidth = 2,
     expandtab = true,
