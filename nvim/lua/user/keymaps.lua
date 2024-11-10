@@ -122,6 +122,7 @@ local tmaps = {
     {'n', '<A-b>', builtin.git_bcommits, {}},
     {'n', "<A-'>", builtin.git_commits, {}},
     {'n', '<A-y>', ":lua require('telescope').extensions.neoclip.default()<CR>", {}},
+    {'n', '<A-g>', ":Telescope projects<CR>", {}},
 
     {'v', 'J', ":m '>+1<CR>gv=gv", {}},
     {'v', 'K', ":m '<-2<CR>gv=gv", {}},
