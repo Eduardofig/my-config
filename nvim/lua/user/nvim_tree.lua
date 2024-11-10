@@ -21,6 +21,13 @@ require("nvim-tree").setup({
     filters = {
         dotfiles = true,
     },
+
+    sync_root_with_cwd = true,
+    respect_buf_cwd = true,
+    update_focused_file = {
+        enable = true,
+        update_root = true
+    },
 })
 
 require("nvim-web-devicons").setup()
@@ -46,3 +53,5 @@ end
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 --[[ vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = change_to_directory }) ]]
+
+require("project_nvim").setup{}

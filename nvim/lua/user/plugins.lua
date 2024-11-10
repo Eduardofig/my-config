@@ -181,5 +181,9 @@ packer.startup(function()
             {'MunifTanjim/nui.nvim'}
         }
     }
+
+
+    -- rooter
+    use "ahmedkhalf/project.nvim"
 end)
 
