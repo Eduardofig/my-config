@@ -96,7 +96,7 @@ packer.startup(function()
     }
 
     --Copilot
-    use "github/copilot.vim"
+    --[[ use "github/copilot.vim" ]]
 
     -- Surround
     use({

@@ -136,7 +136,7 @@ local tmaps = {
     {'n', '<A-;>', function() ui.nav_file(4) end, {}},
 
     {'n', '<leader>g', vim.cmd.Git, {}},
-    {'n', '<A-g>', ':Copilot panel<CR>', {}},
+    --[[ {'n', '<A-g>', ':Copilot panel<CR>', {}}, ]]
 
     --[[ {'n', '<A-t>', copilot_toggle_active, {}}, ]]
     {'n', '<A-t>', ':SupermavenToggle<CR>', {}},

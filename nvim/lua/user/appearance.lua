@@ -24,7 +24,7 @@ vim.cmd("hi NvimTreeWinSeparator guibg=None ctermbg=None")
 vim.cmd("hi TelescopeNormal guibg=None")
 vim.cmd("hi TelescopeBorder guibg=None")
 vim.cmd("hi NormalFloat guibg=None")
-vim.cmd("hi CopilotSuggestion guibg=None guifg=#565f89")
+--[[ vim.cmd("hi CopilotSuggestion guibg=None guifg=#565f89") ]]
 vim.cmd("hi Folded guibg=None")
 vim.cmd("hi Pmenu guifg=#33328b guibg=None")
 vim.cmd("hi FloatBorder guifg=#33328b guibg=None")
