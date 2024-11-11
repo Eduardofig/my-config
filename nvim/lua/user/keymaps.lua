@@ -19,7 +19,7 @@ end
 vim.b.copilot_enabled = 0
 
 local imaps = {
-    {'<C-l>', '<Esc>viw~ea', {}},
+    {'<C-l>', '<Esc>viW~ea', {}},
     {'<C-o>', '<Esc>A;<Esc>', {}},
     {'<C-j>', '<C-n>', {}},
     {'<C-k>', '<C-p>', opts},

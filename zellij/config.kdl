@@ -452,7 +452,7 @@ theme "kanagawa"
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
 //
-scrollback_editor "~/.local/nvim-linux64/bin/nvim"
+scrollback_editor "/home/duzinho039/.local/nvim-linux64/bin/nvim"
 
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
