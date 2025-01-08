@@ -343,7 +343,7 @@ themes{
         bg 27 29 30
         black 0 0 0
         red 255 0 0
-        green 0 140 0
+        green 0 0 0
         yellow 255 255 0
         blue 102 217 239
         magenta 174 129 255
@@ -393,12 +393,25 @@ themes{
         black "#16161D"
         white "#E5E9F0"
     }
+
+    eduardo {
+        fg "#DCD7BA"
+        bg "#1F1F28"
+        red "#C34043"
+        green "#958FB9"
+        yellow "#FF9E3B"
+        blue "#7E9CD8"
+        magenta "#957FB8"
+        orange "#FFA066"
+        cyan "#7FB4CA"
+        black "#16161D"
+        white "#E5E9F0"
+    }
 }
 // Choose the theme that is specified in the themes section.
 // Default: default
 
-theme "kanagawa"
-
+theme "eduardo"
 // The name of the default layout to load on startup
 // Default: "default"
 //
@@ -453,7 +466,7 @@ theme "kanagawa"
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
 //
-scrollback_editor "/home/duzinho039/.local/nvim-linux64/bin/nvim"
+scrollback_editor "/opt/homebrew/bin/nvim"
 
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)

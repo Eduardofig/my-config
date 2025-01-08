@@ -1,0 +1,15 @@
+[packagecache]
+cacheRoot = /Volumes/brazil-pkg-cache/
+
+[cli "bin"]
+node22x = /opt/homebrew/bin/node
+
+node20x = /opt/homebrew/bin/node
+node18x = /opt/homebrew/bin/node
+node16x = /opt/homebrew/bin/node
+node14x = /opt/homebrew/bin/node
+node12x = /opt/homebrew/bin/node
+node10x = /opt/homebrew/bin/node
+node8x = /opt/homebrew/bin/node
+node6x = /opt/homebrew/bin/node
+nodeother = /opt/homebrew/bin/node

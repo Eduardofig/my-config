@@ -12,32 +12,31 @@ local signature = require 'lsp_signature'
 signature.setup()
 
 local kind_icons = {
-    Class = "",
-    Color = "",
-    Constant = "ﲀ",
-    Constructor = "",
-    Enum = "練",
+    Text = "󰉿",
+    Method = "󰆧",
+    Function = "󰊕",
+    Constructor = "",
+    Field = "󰜢",
+    Variable = "󰀫",
+    Class = "󰠱",
+    Interface = "",
+    Module = "",
+    Property = "󰜢",
+    Unit = "󰑭",
+    Value = "󰎠",
+    Enum = "",
+    Keyword = "󰌋",
+    Snippet = "",
+    Color = "󰏘",
+    File = "󰈙",
+    Reference = "󰈇",
+    Folder = "󰉋",
     EnumMember = "",
+    Constant = "󰏿",
+    Struct = "󰙅",
     Event = "",
-    Field = "",
-    File = "",
-    Folder = "",
-    Function = "",
-    Interface = "ﰮ",
-    Keyword = "",
-    Method = "",
-    Module = "",
-    Operator = "",
-    Property = "",
-    Reference = "",
-    Snippet = "",
-    Struct = "",
-    Text = "",
-    TypeParameter = "",
-    Type = "",
-    Unit = "塞",
-    Value = "",
-    Variable = "",
+    Operator = "󰆕",
+    TypeParameter = "",
 }
 
 
@@ -176,41 +175,41 @@ cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done { map_char = {tex = "
 
 
 require('fine-cmdline').setup({
-  cmdline = {
-    enable_keymaps = true,
-    smart_history = true,
-    prompt = ': '
-  },
-  popup = {
-    position = {
-      row = '40%',
-      col = '50%',
+    cmdline = {
+        enable_keymaps = true,
+        smart_history = true,
+        prompt = ': '
     },
-    size = {
-      width = '60%',
+    popup = {
+        position = {
+            row = '40%',
+            col = '50%',
+        },
+        size = {
+            width = '60%',
+        },
+        border = {
+            style = 'rounded',
+        },
+        win_options = {
+            winhighlight = 'Normal:Normal,FloatBorder:FloatBorder',
+        },
     },
-    border = {
-      style = 'rounded',
-    },
-    win_options = {
-      winhighlight = 'Normal:Normal,FloatBorder:FloatBorder',
-    },
-  },
-  hooks = {
-    before_mount = function(input)
-      -- code
-    end,
-    after_mount = function(input)
-      local fn = require('fine-cmdline').fn
-      -- code
+    hooks = {
+        before_mount = function(input)
+            -- code
+        end,
+        after_mount = function(input)
+            local fn = require('fine-cmdline').fn
+            -- code
 
-      vim.keymap.set('i', '<C-n>', fn.complete_or_next_item, {buffer = input.bufnr})
-      vim.keymap.set('i', '<C-p>', fn.stop_complete_or_previous_item, {buffer = input.bufnr})
-    end,
-    set_keymaps = function(imap, feedkeys)
-      -- code
-    end
-  }
+            vim.keymap.set('i', '<C-n>', fn.complete_or_next_item, {buffer = input.bufnr})
+            vim.keymap.set('i', '<C-p>', fn.stop_complete_or_previous_item, {buffer = input.bufnr})
+        end,
+        set_keymaps = function(imap, feedkeys)
+            -- code
+        end
+    }
 })
 
 vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})

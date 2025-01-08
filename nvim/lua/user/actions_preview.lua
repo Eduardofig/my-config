@@ -3,7 +3,7 @@ local hl = require("actions-preview.highlight")
 require("actions-preview").setup {
 
     highlight_command = {
-        hl.delta("/home/duzinho039/.cargo/bin/delta --no-gitconfig --side-by-side"),
+        hl.delta("/Users/duduffa/.cargo/bin/delta --no-gitconfig --side-by-side"),
     },
 
     telescope = {

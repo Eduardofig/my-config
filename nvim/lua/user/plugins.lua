@@ -178,8 +178,11 @@ packer.startup(function()
         }
     }
 
-
     -- rooter
     use "ahmedkhalf/project.nvim"
+
+    use "sainnhe/gruvbox-material"
+
 end)
+
 

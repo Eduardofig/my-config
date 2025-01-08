@@ -1,8 +1,9 @@
+require "user.plugins"
+
 require "user.luasnip_config"
---[[ require "user.rust_tools" ]]
+require "user.rust_tools"
 require "user.lsp_config"
 require "user.cmp_config"
-require "user.plugins"
 require "user.options"
 require "user.keymaps"
 require "user.rename"
@@ -24,12 +25,6 @@ require "user.actions_preview"
 
 local notify = vim.notify
 vim.notify = function(msg, ...)
-    --[[ if msg:match("warning: multiple different client offset_encodings") then ]]
-    --[[     return ]]
-    --[[ end ]]
-
-    --[[ notify(msg, ...) ]]
-
     return
 end
 

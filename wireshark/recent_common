@@ -1,4 +1,4 @@
-# Common recent settings file for Wireshark 3.6.2.
+# Common recent settings file for Wireshark 4.4.2.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -11,7 +11,7 @@ recent.capture_file: /home/duzinho039/labs-netkit/lab01/shared/lab1_host3.pcap
 recent.capture_file: /home/duzinho039/labs-netkit/lab02/shared/lab2_host3.pcap
 recent.capture_file: /home/duzinho039/labs-netkit/lab02/shared/lab2_sw1.pcap
 
-######## Recent capture filters (latest last), cannot be altered through command line ########
+######## Recent capture filters (latest first), cannot be altered through command line ########
 
 
 ######## Recent display filters (latest last), cannot be altered through command line ########
@@ -19,41 +19,37 @@ recent.capture_file: /home/duzinho039/labs-netkit/lab02/shared/lab2_sw1.pcap
 
 # Main window geometry.
 # Decimal numbers.
-gui.geometry_main_x: 0
-gui.geometry_main_y: 0
-gui.geometry_main_width: 1908
-gui.geometry_main_height: 1047
+gui.geometry_main_x: 306
+gui.geometry_main_y: 121
+gui.geometry_main_width: 1116
+gui.geometry_main_height: 707
 
 # Main window maximized.
-# TRUE or FALSE (case-insensitive).
-gui.geometry_main_maximized: TRUE
+# true or false (case-insensitive).
+gui.geometry_main_maximized: false
+
+# Main window geometry state.
+# Hex byte string.
+gui.geometry_main: 01d9d0cb0003000000000132000000790000058d0000035700000132000000950000058d00000357000000000000000005e800000132000000950000058d00000357
 
 # Leftalign Action Buttons.
-# TRUE or FALSE (case-insensitive).
-gui.geometry_leftalign_actions: FALSE
-
-# Statusbar left pane size.
-# Decimal number.
-gui.geometry_status_pane: 250
-
-# Statusbar middle pane size.
-# Decimal number.
-gui.geometry_status_pane_right: 250
+# true or false (case-insensitive).
+gui.geometry_leftalign_actions: false
 
 # Last used Configuration Profile.
 gui.last_used_profile: Default
 
-# WLAN statistics upper pane size.
-# Decimal number.
-gui.geometry_status_wlan_stats_pane: 200
+# Number of packets or events to check for automatic profile switching.
+# Decimal number. Zero disables switching.
+#gui.profile_switch_check_count: 1000
 
 # Warn if running with elevated permissions (e.g. as root).
-# TRUE or FALSE (case-insensitive).
-privs.warn_if_elevated: TRUE
+# true or false (case-insensitive).
+privs.warn_if_elevated: true
 
 # Warn if Wireshark is unable to capture.
-# TRUE or FALSE (case-insensitive).
-sys.warn_if_no_capture: TRUE
+# true or false (case-insensitive).
+sys.warn_if_no_capture: true
 
 # Find packet search in.
 # One of: PACKET_LIST, PACKET_DETAILS, PACKET_BYTES
@@ -64,8 +60,16 @@ gui.search_in: PACKET_LIST
 gui.search_char_set: NARROW_AND_WIDE
 
 # Find packet case sensitive search.
-# TRUE or FALSE (case-insensitive).
-gui.search_case_sensitive: FALSE
+# true or false (case-insensitive).
+gui.search_case_sensitive: false
+
+# Find packet search reverse direction.
+# true or false (case-insensitive).
+gui.search_reverse_dir: false
+
+# Find packet search multiple occurrences.
+# true or false (case-insensitive).
+gui.search_multiple_occurs: false
 
 # Find packet search type.
 # One of: DISPLAY_FILTER, HEX_VALUE, STRING, REGEX
@@ -73,12 +77,14 @@ gui.search_type: DISPLAY_FILTER
 
 # Geometry and maximized state of PacketDialog window.
 # Decimal integers.
-gui.geom.PacketDialog.x: 95
-gui.geom.PacketDialog.y: -1
-gui.geom.PacketDialog.width: 1526
-gui.geom.PacketDialog.height: 837
-# TRUE or FALSE (case-insensitive).
-gui.geom.PacketDialog.maximized: FALSE
+gui.geom.PacketDialog.x: 141
+gui.geom.PacketDialog.y: 118
+gui.geom.PacketDialog.width: 1209
+gui.geom.PacketDialog.height: 732
+# true or false (case-insensitive).
+gui.geom.PacketDialog.maximized: false
+# Qt Geometry State (hex byte string).
+gui.geom.PacketDialog.qt_geometry: 01d9d0cb000300000000008d00000076000005450000036d0000008d00000092000005450000036d000000000000000005e80000008d00000092000005450000036d
 
 # Geometry and maximized state of ColoringRulesDialog window.
 # Decimal integers.
@@ -86,8 +92,10 @@ gui.geom.ColoringRulesDialog.x: 212
 gui.geom.ColoringRulesDialog.y: -30
 gui.geom.ColoringRulesDialog.width: 1272
 gui.geom.ColoringRulesDialog.height: 837
-# TRUE or FALSE (case-insensitive).
-gui.geom.ColoringRulesDialog.maximized: FALSE
+# true or false (case-insensitive).
+gui.geom.ColoringRulesDialog.maximized: false
+# Qt Geometry State (hex byte string).
+gui.geom.ColoringRulesDialog.qt_geometry: (null)
 
 # Custom colors.
 # List of custom colors selected in Qt color picker.

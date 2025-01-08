@@ -1,5 +1,29 @@
 -- lsp_config
 
+function bemol()
+    local bemol_dir = vim.fs.find({ '.bemol' }, { upward = true, type = 'directory'})[1]
+    local ws_folders_lsp = {}
+    if bemol_dir then
+        local file = io.open(bemol_dir .. '/ws_root_folders', 'r')
+        if file then
+
+            for line in file:lines() do
+                table.insert(ws_folders_lsp, line)
+            end
+            file:close()
+        end
+    end
+
+    for _, line in ipairs(ws_folders_lsp) do
+        vim.lsp.buf.add_workspace_folder(line)
+    end
+
+end
+
+local on_attach_bemol = function(_, bufnr)
+  bemol()
+end
+
 local server_list = {
     clangd = {},
     --[[ jedi_language_server = {}, ]]
@@ -12,11 +36,15 @@ local server_list = {
             path = "/usr/bin/python3"
         }
     },
-    ts_ls = {},
+    ts_ls = {
+        on_attach = on_attach_bemol,
+    },
     --[[ sumneko_lua = {}, ]]
     --rust_analyzer = {},
     bashls = {},
-    jdtls = {},
+    jdtls = {
+        on_attach = on_attach_bemol,
+    },
     prosemd_lsp = {},
     html = {},
     tailwindcss = {},
@@ -25,7 +53,7 @@ local server_list = {
     emmet_ls = {},
     eslint = {},
     arduino_language_server = {},
-    gopls = {},
+    --[[ gopls = {}, ]]
     omnisharp = {},
 
     --[[ sqlls = {}, ]]
@@ -67,14 +95,14 @@ end
 local tw_highlight = require('tailwind-highlight')
 
 lspcfg.tailwindcss.setup({
-  on_attach = function(client, bufnr)
-    -- rest of you config
-    tw_highlight.setup(client, bufnr, {
-      single_column = false,
-      mode = 'background',
-      debounce = 200,
-    })
-  end
+    on_attach = function(client, bufnr)
+        -- rest of you config
+        tw_highlight.setup(client, bufnr, {
+            single_column = false,
+            mode = 'background',
+            debounce = 200,
+        })
+    end
 })
 
 
@@ -83,7 +111,8 @@ require("lsp_lines").setup{}
 
 -- Disable virtual_text since it's redundant due to lsp_lines.
 vim.diagnostic.config({
-  virtual_text = false,
+    virtual_text = false,
 })
 
 vim.diagnostic.config({ virtual_lines = false })
+
