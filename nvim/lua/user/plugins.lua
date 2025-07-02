@@ -5,6 +5,7 @@ packer.startup(function()
     -- lsp
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
+    --[[ use 'mfussenegger/nvim-jdtls' ]]
 
     -- completion
     use 'hrsh7th/nvim-cmp'
@@ -179,7 +180,7 @@ packer.startup(function()
     }
 
     -- rooter
-    use "ahmedkhalf/project.nvim"
+    --[[ use "ahmedkhalf/project.nvim" ]]
 
     use "sainnhe/gruvbox-material"
 

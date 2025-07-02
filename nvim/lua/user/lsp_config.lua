@@ -21,7 +21,7 @@ function bemol()
 end
 
 local on_attach_bemol = function(_, bufnr)
-  bemol()
+    bemol()
 end
 
 local server_list = {
@@ -69,12 +69,12 @@ local lsp_installer = require "nvim-lsp-installer"
 lsp_installer.setup(installer_opts)
 
 local lspcfg = require "lspconfig"
+require('rust-tools').setup{}
 
 for server, opts in pairs(server_list) do
     lspcfg[server].setup(opts)
 end
 
-require('rust-tools').setup{}
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
     border = "rounded",
@@ -105,7 +105,6 @@ lspcfg.tailwindcss.setup({
     end
 })
 
-
 require("gopher").setup{}
 require("lsp_lines").setup{}
 
@@ -115,4 +114,3 @@ vim.diagnostic.config({
 })
 
 vim.diagnostic.config({ virtual_lines = false })
-

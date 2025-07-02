@@ -16,7 +16,7 @@ require "user.telescope"
 require "user.folds"
 require "user.git"
 require "user.trouble"
-require "user.null_ls"
+--[[ require "user.null_ls" ]]
 require "user.dap"
 require "user.treesitter"
 require "user.appearance"

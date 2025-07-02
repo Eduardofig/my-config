@@ -54,4 +54,4 @@ end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 --[[ vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = change_to_directory }) ]]
 
-require("project_nvim").setup{}
+--[[ require("project_nvim").setup{} ]]

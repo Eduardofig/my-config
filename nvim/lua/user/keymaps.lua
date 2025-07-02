@@ -58,6 +58,7 @@ local nmaps = {
     {'<leader>l', ':wincmd l<CR>', {}},
 
     {'gt', ':Trouble lsp_definitions toggle focus=true<CR>', opts},
+    {'<2-LeftMouse>', '<LeftMouse>:Trouble lsp_definitions toggle focus=true<CR>', opts},
     {'g[', ':Gvdiffsplit<CR>', opts},
     {'gd', ':Trouble lsp_references toggle focus=true<CR>', opts},
     {'gc', ':TodoTrouble<CR>', opts},
@@ -67,6 +68,7 @@ local nmaps = {
     {'gh', ':Trouble lsp_type_definitions toggle focus=true<CR>', opts},
     {'go', ':Trouble diagnostics toggle focus=true<CR>', opts},
     {'gf', ':lua vim.lsp.buf.format({async = true})<CR>', opts},
+    {'gy', ':%y<CR>', opts},
 
     { '<leader>M', ":lua require('treesj').toggle({ split = { recursive = true } }) <CR>", opts },
     { '<leader>m', ":lua require('treesj').toggle()<CR>", opts },
@@ -122,7 +124,7 @@ local tmaps = {
     {'n', '<A-b>', builtin.git_bcommits, {}},
     {'n', "<A-'>", builtin.git_commits, {}},
     {'n', '<A-y>', ":lua require('telescope').extensions.neoclip.default()<CR>", {}},
-    {'n', '<A-g>', ":Telescope projects<CR>", {}},
+    --[[ {'n', '<A-g>', ":Telescope projects<CR>", {}}, ]]
 
     {'n', '<A-c>', 'O<Esc>', {}},
 
