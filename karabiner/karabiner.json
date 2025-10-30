@@ -4,6 +4,41 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Change shift right option to shift right command",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "right_command",
+                                    "modifiers": {
+                                        "mandatory": ["shift"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_command",
+                                        "modifiers": ["shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Caps Lock to Esc and Ctrl",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "right_control" }],
+                                "to_if_alone": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Change command space to command option",
                         "manipulators": [
                             {
@@ -25,15 +60,15 @@
                         ]
                     },
                     {
-                        "description": "Caps Lock to Esc and Ctrl",
+                        "description": "Tab to Left Shift and Tab",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "caps_lock",
+                                    "key_code": "tab",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "right_control" }],
-                                "to_if_alone": [{ "key_code": "escape" }],
+                                "to": [{ "key_code": "left_shift" }],
+                                "to_if_alone": [{ "key_code": "tab" }],
                                 "type": "basic"
                             }
                         ]

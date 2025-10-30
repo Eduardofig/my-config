@@ -145,7 +145,7 @@ local tmaps = {
 
     --[[ {'n', '<A-t>', copilot_toggle_active, {}}, ]]
     {'n', '<A-t>', ':SupermavenToggle<CR>', {}},
-    {'n', '<C-c>', ':TSContextToggle<CR>', {}},
+    {'n', '<C-c>', ':TSContext toggle<CR>', {}},
 
     {'i', '<C-a>', ":copilot#Accept('\\<CR>')<CR>", {silent = true}},
     {'i', '<C-r>', "<Plug>(copilot-next)", {}},
