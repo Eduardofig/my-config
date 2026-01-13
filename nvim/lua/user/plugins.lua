@@ -5,6 +5,7 @@ packer.startup(function()
     -- lsp
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
+    use 'j-hui/fidget.nvim'
     --[[ use 'mfussenegger/nvim-jdtls' ]]
 
     -- completion
@@ -157,20 +158,17 @@ packer.startup(function()
     use 'nvim-neotest/nvim-nio'
 
     -- maximize windows
-    use {
-        'declancm/maximize.nvim',
-        config = function() require('maximize').setup() end
-    }
+    use 'declancm/maximize.nvim'
 
     use "lukas-reineke/indent-blankline.nvim"
 
     use "diepm/vim-rest-console"
 
-    use "olexsmir/gopher.nvim"
+    --[[ use "olexsmir/gopher.nvim" ]]
 
     use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
 
-    use "supermaven-inc/supermaven-nvim"
+    --[[ use "supermaven-inc/supermaven-nvim" ]]
 
     use {
         'VonHeikemen/fine-cmdline.nvim',

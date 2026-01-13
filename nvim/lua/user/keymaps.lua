@@ -144,7 +144,6 @@ local tmaps = {
     --[[ {'n', '<A-g>', ':Copilot panel<CR>', {}}, ]]
 
     --[[ {'n', '<A-t>', copilot_toggle_active, {}}, ]]
-    {'n', '<A-t>', ':SupermavenToggle<CR>', {}},
     {'n', '<C-c>', ':TSContext toggle<CR>', {}},
 
     {'i', '<C-a>', ":copilot#Accept('\\<CR>')<CR>", {silent = true}},
@@ -168,6 +167,8 @@ local tmaps = {
     {'n', 'gsx', ":Gitsigns reset_buffer_index<CR>", {}}, 
     {'n', 'gst', ":Gitsigns setloclist<CR>", {}},
 
+    --Maximize
+    --[[ {'n', '<leader>m', ":lua require('maximize').toggle()<CR>", {}}, ]]
 
 }
 
@@ -193,10 +194,3 @@ vim.g.copilot_no_tab_map = true
 -- unbind c-c
 
 vim.api.nvim_set_keymap('i', '<C-c>', '<Nop>', { noremap = true, silent = true})
-
-require("supermaven-nvim").setup({
-    keymaps = {
-    accept_suggestion = "<C-c>",
-  },
-})
-
