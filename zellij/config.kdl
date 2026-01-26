@@ -4,6 +4,8 @@ keybinds clear-defaults=true {
     normal {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
+        bind "Ctrl Alt h" { GoToPreviousTab; }
+        bind "Ctrl Alt l" { GoToNextTab; }
     }
     locked {
         bind "Ctrl g" { SwitchToMode "Normal"; }
