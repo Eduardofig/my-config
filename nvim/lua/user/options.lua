@@ -23,7 +23,8 @@ local options = {
     mouse = 'a',
     clipboard = 'unnamedplus',
     pumheight = 10,
-    mousescroll = 'ver:5'
+    mousescroll = 'ver:5',
+    wrap = true,
 }
 
 for k, v in pairs(options) do

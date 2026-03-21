@@ -57,14 +57,14 @@ local nmaps = {
     {'<leader>k', ':wincmd k<CR>', {}},
     {'<leader>l', ':wincmd l<CR>', {}},
 
-    {'gt', ':Trouble lsp_definitions toggle focus=true<CR>', opts},
-    {'<2-LeftMouse>', '<LeftMouse>:Trouble lsp_definitions toggle focus=true<CR>', opts},
+    {'gt', ':Trouble lsp_definitions toggle focus=true<CR>zz', opts},
+    {'<2-LeftMouse>', '<LeftMouse>:Trouble lsp_definitions toggle focus=true<CR>zz', opts},
     {'g[', ':Gvdiffsplit<CR>', opts},
     {'gd', ':Trouble lsp_references toggle focus=true<CR>', opts},
     {'gc', ':TodoTrouble<CR>', opts},
     {'do', ':lua vim.lsp.buf.hover()<CR>', opts},
-    {'gj', ':lua vim.diagnostic.goto_next()<CR>', opts},
-    {'gk', ':lua vim.diagnostic.goto_prev()<CR>', opts},
+    {'gj', ':lua vim.diagnostic.goto_next()<CR>zz', opts},
+    {'gk', ':lua vim.diagnostic.goto_prev()<CR>zz', opts},
     {'gh', ':Trouble lsp_type_definitions toggle focus=true<CR>', opts},
     {'go', ':Trouble diagnostics toggle focus=true<CR>', opts},
     {'gf', ':lua vim.lsp.buf.format({async = true})<CR>', opts},
@@ -80,8 +80,8 @@ local nmaps = {
     {'J', 'mzJ`z', opts},
 
     {'=', 'mzgg=G`zzz', opts},
-    { 'm', ']m', {}},
-    {'M', '[m', {}},
+    {'m', ']mzz', {}},
+    {'M', '[mzz', {}},
 
     -- dap keymaps
 

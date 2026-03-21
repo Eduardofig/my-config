@@ -19,6 +19,7 @@ require "user.git"
 require "user.trouble"
 require "user.null_ls"
 require "user.dap"
+require "user.actions_preview"
 
 local notify = vim.notify
 vim.notify = function(msg, ...)
@@ -32,3 +33,5 @@ vim.notify = function(msg, ...)
 end
 
 vim.b.copilot_enabled = 0
+
+vim.env.PATH = vim.env.VIM_PATH or vim.env.PATH

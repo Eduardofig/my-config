@@ -89,16 +89,128 @@ for _, language in ipairs(js_based_languages) do
 end
 
 
---[[ require("dap").configurations["go"] = { ]]
---[[     { ]]
---[[         type = "go", ]]
---[[         name = "Debug", ]]
---[[         request = "launch", ]]
---[[         program = "${file}", ]]
---[[         dlvToolPath = vim.fn.exepath("dlv"), ]]
---[[     }, ]]
---[[ } ]]
---[[]]
+require("dap").configurations["go"] = {
+    -- Bazel Remote Debugging (DAP) - Recommended for Bazel projects
+    -- Start debug server with: bazel debug //path/to:target
+    -- For function calls without optimization: bazel debug //path/to:target --@io_bazel_rules_go//go/config:gc_goopts="-N,-l"
+    {
+        type = "go",
+        name = "Connect to Bazel Debug Server [DAP]",
+        request = "attach",
+        mode = "remote",
+        port = 2345,
+        host = "127.0.0.1",
+        substitutePath = {
+            {
+                from = vim.fn.expand("${env:WORKSPACE_ROOT}/src") or "${workspaceFolder}/src",
+                to = "src",
+            },
+            {
+                from = vim.fn.expand("${env:WORKSPACE_ROOT}/bazel-go-code/external/") or "${workspaceFolder}/bazel-go-code/external/",
+                to = "external/",
+            },
+            {
+                from = vim.fn.expand("${env:WORKSPACE_ROOT}/bazel-out/") or "${workspaceFolder}/bazel-out/",
+                to = "bazel-out/",
+            },
+            {
+                from = vim.fn.expand("${env:WORKSPACE_ROOT}/bazel-go-code/external/go_sdk") or "${workspaceFolder}/bazel-go-code/external/go_sdk",
+                to = "GOROOT/",
+            },
+        },
+    },
+    {
+        type = "go",
+        name = "Debug Current File",
+        request = "launch",
+        program = "${file}",
+        dlvToolPath = vim.fn.exepath("dlv"),
+    },
+    {
+        type = "go",
+        name = "Debug Package",
+        request = "launch",
+        program = "${fileDirname}",
+        dlvToolPath = vim.fn.exepath("dlv"),
+    },
+    {
+        type = "go",
+        name = "Debug Main Package",
+        request = "launch",
+        program = "${workspaceFolder}",
+        dlvToolPath = vim.fn.exepath("dlv"),
+    },
+    {
+        type = "go",
+        name = "Attach to Process",
+        mode = "local",
+        request = "attach",
+        processId = require("dap.utils").pick_process,
+        dlvToolPath = vim.fn.exepath("dlv"),
+    },
+    {
+        type = "go",
+        name = "Attach to Remote",
+        mode = "remote",
+        request = "attach",
+        substitutePath = {
+            {
+                from = "${workspaceFolder}",
+                to = "/app",
+            },
+        },
+        port = function()
+            return vim.fn.input("Delve Port: ", "2345")
+        end,
+        host = function()
+            return vim.fn.input("Host: ", "127.0.0.1")
+        end,
+        dlvToolPath = vim.fn.exepath("dlv"),
+    },
+    {
+        type = "go",
+        name = "Debug Test (Current File)",
+        request = "launch",
+        mode = "test",
+        program = "${file}",
+        dlvToolPath = vim.fn.exepath("dlv"),
+    },
+    {
+        type = "go",
+        name = "Debug Test (Package)",
+        request = "launch",
+        mode = "test",
+        program = "${fileDirname}",
+        dlvToolPath = vim.fn.exepath("dlv"),
+    },
+    {
+        type = "go",
+        name = "Debug Test (Specific)",
+        request = "launch",
+        mode = "test",
+        program = "${fileDirname}",
+        args = function()
+            local test_name = vim.fn.input("Test name (e.g., TestMyFunction): ")
+            if test_name == "" then
+                return {}
+            end
+            return {"-test.run", "^" .. test_name .. "$"}
+        end,
+        dlvToolPath = vim.fn.exepath("dlv"),
+    },
+    {
+        type = "go",
+        name = "Debug with Arguments",
+        request = "launch",
+        program = "${file}",
+        args = function()
+            local args_string = vim.fn.input("Arguments: ")
+            return vim.split(args_string, " ")
+        end,
+        dlvToolPath = vim.fn.exepath("dlv"),
+    },
+}
+
 
 require("nvim-dap-virtual-text").setup()
 
@@ -116,4 +228,9 @@ dap.listeners.before.event_exited["dapui_config"] = function()
     dapui.close({})
 end
 
-vim.keymap.set('n', '<leader>ui', require 'dapui'.toggle)
+require('maximize').setup({
+    plugins = {
+        dapui = { enable = true },  -- enable nvim-dap-ui integration
+        tree = { enable = true },   -- enable nvim-tree.lua integration
+    }
+})
