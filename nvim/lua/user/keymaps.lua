@@ -62,7 +62,7 @@ local nmaps = {
     {'g[', ':Gvdiffsplit<CR>', opts},
     {'gd', ':Trouble lsp_references toggle focus=true<CR>', opts},
     {'gc', ':TodoTrouble<CR>', opts},
-    {'do', ':lua vim.lsp.buf.hover()<CR>', opts},
+    {'do', ':lua vim.lsp.buf.hover({ border = { "╔", "═", "╗", "║", "╝", "═", "╚", "║" } })<CR>', opts},
     {'gj', ':lua vim.diagnostic.goto_next()<CR>zz', opts},
     {'gk', ':lua vim.diagnostic.goto_prev()<CR>zz', opts},
     {'gh', ':Trouble lsp_type_definitions toggle focus=true<CR>', opts},

@@ -136,7 +136,7 @@ end
 
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-    border = "rounded",
+    border = { "╔", "═", "╗", "║", "╝", "═", "╚", "║" },
 })
 
 local signs = {
@@ -173,6 +173,8 @@ require("fidget").setup{}
 -- Disable virtual_text since it's redundant due to lsp_lines.
 vim.diagnostic.config({
     virtual_text = false,
+    virtual_lines = false,
+    float = {
+        border = { "╔", "═", "╗", "║", "╝", "═", "╚", "║" },
+    },
 })
-
-vim.diagnostic.config({ virtual_lines = false })

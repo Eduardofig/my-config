@@ -87,7 +87,7 @@ require('nvim-treesitter.configs').setup({
 
         lsp_interop = {
             enable = true,
-            border = 'none',
+            border = { "╔", "═", "╗", "║", "╝", "═", "╚", "║" },
             floating_preview_opts = {},
             peek_definition_code = {
                 ["<leader>df"] = "@function.outer",
