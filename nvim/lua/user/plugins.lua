@@ -4,7 +4,7 @@ local packer = require 'packer'
 packer.startup(function()
     -- lsp
     use 'neovim/nvim-lspconfig'
-    use 'williamboman/nvim-lsp-installer'
+    --[[ use 'williamboman/nvim-lsp-installer' ]] -- deprecated, servers assumed already installed
     use 'j-hui/fidget.nvim'
     --[[ use 'mfussenegger/nvim-jdtls' ]]
 
@@ -44,7 +44,7 @@ packer.startup(function()
     use 'smjonas/inc-rename.nvim'
 
     --rust tools
-    use 'simrat39/rust-tools.nvim'
+    use 'mrcjkb/rustaceanvim' -- successor to rust-tools.nvim
 
     -- function signature
     use 'ray-x/lsp_signature.nvim'

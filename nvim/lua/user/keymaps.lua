@@ -25,8 +25,7 @@ local imaps = {
     {'<C-k>', '<C-p>', opts},
     {'<C-]>', '<Plug>(copilot-next)', opts},
     {'<C-i>', '<Esc>A', opts},
-    {'<Esc>', '<Esc>:w<CR>', opts},
-    --[[ {'<Esc>', '<Esc>:w<CR>', {}}, ]]
+    --[[ {'<Esc>', '<Esc>:w<CR>', opts}, ]]
 }
 
 for i = 1, #imaps do
@@ -34,11 +33,11 @@ for i = 1, #imaps do
 end
 
 local nmaps = {
-    {'u', 'u:w<CR>', opts},
-    {'<C-r>', '<C-r>:w<CR>', opts},
-    {'p', 'p:w<CR>', opts},
-    {'P', 'P:w<CR>', opts},
-    {'<Esc>', '<Esc>:w<CR>', opts},
+    --[[ {'u', 'u:w<CR>', opts}, ]]
+    --[[ {'<C-r>', '<C-r>:w<CR>', opts}, ]]
+    --[[ {'p', 'p:w<CR>', opts}, ]]
+    --[[ {'P', 'P:w<CR>', opts}, ]]
+    --[[ {'<Esc>', '<Esc>:w<CR>', opts}, ]]
 
     {'Q', ':q<CR>', opts},
 
@@ -102,6 +101,10 @@ local nmaps = {
 for i = 1, #nmaps do
     keymap('n', nmaps[i][1], nmaps[i][2], nmaps[i][3])
 end
+
+-- Override the built-in window prefix so Ctrl-w only saves the current buffer.
+vim.keymap.set('n', '<C-w>', '<Cmd>write<CR>', { noremap = true, silent = true, nowait = true })
+
 
 -- Gambiarra Telescope 
 local builtin = require "telescope.builtin"

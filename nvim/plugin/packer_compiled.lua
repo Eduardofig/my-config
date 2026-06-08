@@ -239,11 +239,6 @@ _G.packer_plugins = {
     path = "/Users/eduardoffa19/.local/share/nvim/site/pack/packer/start/nvim-dap-vscode-js",
     url = "https://github.com/mxsdev/nvim-dap-vscode-js"
   },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "/Users/eduardoffa19/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/eduardoffa19/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -317,10 +312,10 @@ _G.packer_plugins = {
     path = "/Users/eduardoffa19/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["rust-tools.nvim"] = {
+  rustaceanvim = {
     loaded = true,
-    path = "/Users/eduardoffa19/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
-    url = "https://github.com/simrat39/rust-tools.nvim"
+    path = "/Users/eduardoffa19/.local/share/nvim/site/pack/packer/start/rustaceanvim",
+    url = "https://github.com/mrcjkb/rustaceanvim"
   },
   ["tailwind-highlight.nvim"] = {
     loaded = true,
@@ -387,14 +382,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-surround
-time([[Config for nvim-surround]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
-time([[Config for nvim-surround]], false)
 -- Config for: treesj
 time([[Config for treesj]], true)
 try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vtreesj\frequire\0", "config", "treesj")
 time([[Config for treesj]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
+time([[Config for nvim-surround]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]

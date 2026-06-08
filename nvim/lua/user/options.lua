@@ -1,8 +1,8 @@
 -- options
 local options = {
-    tabstop = 4,
-    softtabstop = 4,
-    shiftwidth = 4,
+    tabstop = 2,
+    softtabstop = 2,
+    shiftwidth = 2,
     expandtab = true,
     smartindent = true,
     exrc = true,
@@ -15,7 +15,7 @@ local options = {
     ignorecase = true,
     smartcase = true,
     backup = false,
-    undodir = '~/.undodir',
+    undodir = os.getenv("HOME") .. "/.undodir",
     undofile = true,
     incsearch = true,
     termguicolors = true,
