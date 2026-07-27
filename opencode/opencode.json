@@ -1,0 +1,580 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "plan": {
+      "model": "anthropic/claude-opus-4-6"
+    },
+    "verify": {
+      "description": "Verification model — reviews and validates changes against the task.",
+      "mode": "primary",
+      "model": "openai/gpt-5.5",
+      "permission": {
+        "edit": "deny"
+      },
+      "prompt": "{file:/Users/eduardoffa19/.config/opencode/prompts/verify.txt}"
+    }
+  },
+  "autoupdate": false,
+  "compaction": {
+    "auto": true,
+    "prune": true,
+    "reserved": 600000
+  },
+  "disabled_providers": [
+    "opencode"
+  ],
+  "enabled_providers": [
+    "anthropic",
+    "openai",
+    "fireworks",
+    "google"
+  ],
+  "lsp": {
+    "gopls": {
+      "disabled": true
+    },
+    "jdtls": {
+      "disabled": true
+    },
+    "ts_ls": {
+      "command": [
+        "typescript-language-server",
+        "--stdio"
+      ],
+      "extensions": [
+        ".ts",
+        ".tsx",
+        ".js",
+        ".jsx",
+        ".mjs",
+        ".cjs",
+        ".mts",
+        ".cts"
+      ]
+    },
+    "typescript": {
+      "disabled": true
+    },
+    "ulsp": {
+      "command": [
+        "socat",
+        "-",
+        "tcp:localhost:27883,ignoreeof"
+      ],
+      "extensions": [
+        ".go",
+        ".java"
+      ]
+    }
+  },
+  "mcp": {
+    "bits-mcp": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "bits-mcp"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "code-mcp": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "code-mcp"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "experiment-analysis": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "experiment-analysis"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "flipr-mcp": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "flipr-mcp"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "foghorn-api": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "foghorn-api"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "fulfillment-queries": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "fulfillment-queries"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "genai-conan": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "genai-conan"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "google-mcp": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "google-mcp"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "logging-mcp": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "logging-mcp"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "mcp-gateway": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "mcp-gateway"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "metric-mcp": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "metric-mcp"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "michelangelo-mcp-staging": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "michelangelo-mcp-staging"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "moncon": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "moncon"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "ocdash-v2": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "ocdash-v2"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "p3-go": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "p3-go"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "querybi-mcp": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "querybi-mcp"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "querybuilder-copilot": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "querybuilder-copilot"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "queryrunner-mcp": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "queryrunner-mcp"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "slack-mcp": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "slack-mcp"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "slate-mcp": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "slate-mcp"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "superflurry-mcp": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "superflurry-mcp"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "udash-mcp": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "udash-mcp"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "umetadata": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "umetadata"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "umetric-workflow": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "umetric-workflow"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "usearch-backend": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "usearch-backend"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "ustruct-lineage": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "ustruct-lineage"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "xp_copilot": {
+      "command": [
+        "aifx",
+        "mcp",
+        "run",
+        "xp_copilot"
+      ],
+      "enabled": true,
+      "type": "local"
+    }
+  },
+  "model": "anthropic/claude-opus-4-6",
+  "provider": {
+    "anthropic": {
+      "models": {
+        "claude-fable-5": {
+          "cost": {
+            "cache_read": 1,
+            "cache_write": 12.5,
+            "input": 10,
+            "output": 50
+          },
+          "name": "Claude Fable 5"
+        },
+        "claude-opus-4-6": {
+          "cost": {
+            "cache_read": 0.5,
+            "cache_write": 6.25,
+            "input": 5,
+            "output": 25
+          },
+          "name": "Planning Model: Claude Opus 4.6"
+        },
+        "claude-opus-4-8": {
+          "cost": {
+            "cache_read": 0.5,
+            "cache_write": 6.25,
+            "input": 5,
+            "output": 25
+          },
+          "name": "Claude Opus 4.8"
+        },
+        "claude-sonnet-4-6": {
+          "cost": {
+            "cache_read": 0.3,
+            "cache_write": 3.75,
+            "input": 3,
+            "output": 15
+          },
+          "name": "Claude Sonnet 4.6"
+        },
+        "claude-sonnet-5": {
+          "cost": {
+            "cache_read": 0.2,
+            "cache_write": 2.5,
+            "input": 2,
+            "output": 10
+          },
+          "name": "Claude Sonnet 5"
+        }
+      },
+      "options": {
+        "apiKey": "usso-managed-token",
+        "baseURL": "https://genai-api.uberinternal.com/v1",
+        "chunkTimeout": 30000,
+        "headers": {
+          "Authorization": "Bearer {env:ANTHROPIC_API_KEY}",
+          "OpenAI-Organization": "7f16e5ad-3a7c-4a43-93e6-9ed48a74d96e"
+        }
+      },
+      "whitelist": [
+        "claude-fable-5",
+        "claude-opus-4-6",
+        "claude-opus-4-8",
+        "claude-sonnet-4-6",
+        "claude-sonnet-5"
+      ]
+    },
+    "fireworks": {
+      "models": {
+        "deepseek-v4-pro": {
+          "cost": {
+            "cache_read": 0.174,
+            "input": 1.74,
+            "output": 3.48
+          },
+          "name": "DeepSeek V4 Pro"
+        },
+        "glm-5.2-fast": {
+          "cost": {
+            "cache_read": 0.21,
+            "input": 2.1,
+            "output": 6.6
+          },
+          "name": "Execution Model: GLM 5.2 Fast"
+        },
+        "kimi-k2.7-code-fast": {
+          "cost": {
+            "cache_read": 0.38,
+            "input": 1.9,
+            "output": 8
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ]
+          },
+          "name": "Execution Model: Kimi K2.7 Fast"
+        },
+        "qwen3p7-plus": {
+          "cost": {
+            "cache_read": 0.08,
+            "input": 0.4,
+            "output": 1.6
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ]
+          },
+          "name": "Qwen 3.7 Plus"
+        }
+      },
+      "options": {
+        "apiKey": "usso-managed-token",
+        "baseURL": "https://genai-api.uberinternal.com/v1",
+        "chunkTimeout": 30000,
+        "headers": {
+          "OpenAI-Organization": "7f16e5ad-3a7c-4a43-93e6-9ed48a74d96e"
+        }
+      },
+      "whitelist": [
+        "glm-5.2-fast",
+        "kimi-k2.7-code-fast",
+        "qwen3p7-plus",
+        "deepseek-v4-pro"
+      ]
+    },
+    "google": {
+      "models": {
+        "gemini-3.5-flash": {
+          "cost": {
+            "cache_read": 0.5,
+            "input": 5,
+            "output": 30
+          },
+          "name": "Gemini 3.5 Flash"
+        }
+      },
+      "options": {
+        "apiKey": "usso-managed-token",
+        "baseURL": "https://genai-api.uberinternal.com/v1",
+        "chunkTimeout": 30000,
+        "headers": {
+          "OpenAI-Organization": "7f16e5ad-3a7c-4a43-93e6-9ed48a74d96e"
+        }
+      },
+      "whitelist": [
+        "gemini-3.5-flash"
+      ]
+    },
+    "openai": {
+      "models": {
+        "gpt-5.5": {
+          "cost": {
+            "cache_read": 0.5,
+            "input": 5,
+            "output": 30
+          },
+          "name": "Verification Model: GPT 5.5",
+          "reasoning": true
+        },
+        "gpt-5.6-luna": {
+          "cost": {
+            "cache_read": 0.1,
+            "cache_write": 1.25,
+            "input": 1,
+            "output": 6
+          },
+          "name": "GPT 5.6 Luna",
+          "options": {
+            "reasoningEffort": "medium"
+          },
+          "reasoning": true
+        },
+        "gpt-5.6-sol": {
+          "cost": {
+            "cache_read": 0.5,
+            "cache_write": 6.25,
+            "input": 5,
+            "output": 30
+          },
+          "name": "GPT 5.6 Sol",
+          "options": {
+            "reasoningEffort": "medium"
+          },
+          "reasoning": true
+        },
+        "gpt-5.6-terra": {
+          "cost": {
+            "cache_read": 0.25,
+            "cache_write": 3.125,
+            "input": 2.5,
+            "output": 15
+          },
+          "name": "GPT 5.6 Terra",
+          "options": {
+            "reasoningEffort": "high"
+          },
+          "reasoning": true
+        }
+      },
+      "options": {
+        "apiKey": "usso-managed-token",
+        "baseURL": "https://genai-api.uberinternal.com/v1",
+        "chunkTimeout": 30000,
+        "headers": {
+          "Authorization": "Bearer {env:OPENAI_API_KEY}",
+          "OpenAI-Organization": "7f16e5ad-3a7c-4a43-93e6-9ed48a74d96e"
+        }
+      },
+      "whitelist": [
+        "gpt-5.5",
+        "gpt-5.6-terra",
+        "gpt-5.6-luna",
+        "gpt-5.6-sol"
+      ]
+    }
+  },
+  "share": "disabled",
+  "skills": {
+    "paths": [
+      "/Users/eduardoffa19/.local/share/aifx/marketplaces/uber-code/devexp-agent-marketplace/claude-code/plugins/core/analytics/data-analyst/skills",
+      "/Users/eduardoffa19/.local/share/aifx/marketplaces/uber-code/devexp-agent-marketplace/claude-code/plugins/core/code-quality/uber-reviewer/skills",
+      "/Users/eduardoffa19/.local/share/aifx/marketplaces/uber-code/devexp-agent-marketplace/claude-code/plugins/core/dev-workflow/code-mode/skills",
+      "/Users/eduardoffa19/.local/share/aifx/marketplaces/uber-code/devexp-agent-marketplace/claude-code/plugins/core/dev-workflow/slack/skills",
+      "/Users/eduardoffa19/.local/share/aifx/marketplaces/uber-code/devexp-agent-marketplace/claude-code/plugins/core/dev-workflow/uber-dev/skills",
+      "/Users/eduardoffa19/.local/share/aifx/marketplaces/uber-code/devexp-agent-marketplace/claude-code/plugins/core/productivity/cost-check/skills",
+      "/Users/eduardoffa19/.local/share/aifx/opencode-skills-prefixed/agent-guard",
+      "/Users/eduardoffa19/.local/share/aifx/opencode-skills-prefixed/code-mode",
+      "/Users/eduardoffa19/.local/share/aifx/opencode-skills-prefixed/cost-check",
+      "/Users/eduardoffa19/.local/share/aifx/opencode-skills-prefixed/data-analyst",
+      "/Users/eduardoffa19/.local/share/aifx/opencode-skills-prefixed/slack",
+      "/Users/eduardoffa19/.local/share/aifx/opencode-skills-prefixed/uber-dev"
+    ]
+  },
+  "small_model": "fireworks/kimi-k2.7-code-fast"
+}

@@ -31,7 +31,10 @@ vim.lsp.config('ts_ls', {
 })
 
 vim.lsp.config('gopls', {
-    cmd = {'gopls', '-remote=auto', '-rpc.trace', '-v'},
+    cmd = {
+        vim.fn.expand('~/Uber/go-code/tools/ide/managed_gopls.sh'),
+        '-mode=stdio',
+    },
     flags = {
         debounce_text_changes = 1000,
     },

@@ -56,6 +56,9 @@ local nmaps = {
     {'<leader>k', ':wincmd k<CR>', {}},
     {'<leader>l', ':wincmd l<CR>', {}},
 
+    {'<C-d>', '<C-d>zz', {}},
+    {'<C-u>', '<C-u>zz', {}},
+
     {'gt', ':Trouble lsp_definitions toggle focus=true<CR>zz', opts},
     {'<2-LeftMouse>', '<LeftMouse>:Trouble lsp_definitions toggle focus=true<CR>zz', opts},
     {'g[', ':Gvdiffsplit<CR>', opts},
@@ -104,6 +107,16 @@ end
 
 -- Override the built-in window prefix so Ctrl-w only saves the current buffer.
 vim.keymap.set('n', '<C-w>', '<Cmd>write<CR>', { noremap = true, silent = true, nowait = true })
+
+-- Prevent accidental triple/quadruple clicks from entering visual mode.
+-- (Double click is intentionally bound above to jump to definition.)
+for _, mode in ipairs({ 'n', 'i', 'v' }) do
+    vim.keymap.set(mode, '<3-LeftMouse>', '<Nop>', { noremap = true, silent = true })
+    vim.keymap.set(mode, '<4-LeftMouse>', '<Nop>', { noremap = true, silent = true })
+end
+
+-- Right click jumps back in the jumplist (Ctrl-O), pairing with double-click go-to-definition.
+vim.keymap.set('n', '<RightMouse>', '<C-o>', { noremap = true, silent = true })
 
 
 -- Gambiarra Telescope 

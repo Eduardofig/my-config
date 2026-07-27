@@ -1,0 +1,8 @@
+{
+  "$schema": "https://opencode.ai/tui.json",
+  "plugin": [
+    "file:///Users/eduardoffa19/.config/opencode/plugins/aifx-spending-tui.plugin.js",
+    "file:///Users/eduardoffa19/.config/opencode/plugins/aifx-sidebar-tui.plugin.js"
+  ],
+  "theme": "transparent"
+}
