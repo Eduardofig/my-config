@@ -156,7 +156,7 @@ keybinds clear-defaults=true {
     shared_except "locked" {
         bind "Ctrl g" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
-        bind "Alt g" { Run "aifx" "agent" "run" "opencode" "--model" "anthropic/claude-opus-4-6"; }
+        bind "Alt g" { Run "zsh" "-ic" "oc"; }
         bind "Alt t" { Run "lazygit";}
         bind "Alt x" { Run "nvim" "."; }
         bind "Alt n" { NewPane "Right"; }
@@ -499,5 +499,4 @@ scrollback_editor "/opt/homebrew/bin/nvim"
 // Default: true
 //
 // styled_underlines false
-
 
